@@ -1,0 +1,42 @@
+{
+    "code": "200",
+    "data": [
+        {
+            "from" : "1445202000",
+            "to" : "002",
+            "timestamp" : "default",
+            "msg" : "Hi~ 01."
+        },
+        {
+            "from" : "1445202000",
+            "to" : "002",
+            "timestamp" : "default",
+            "msg" : "Hi~ 04."
+        },
+        {
+            "from" : "002",
+            "to" : "1445202000",
+            "timestamp" : "default",
+            "msg" : "Hi~ 03."
+        },
+        {
+            "from" : "1445202000",
+            "to" : "002",
+            "timestamp" : "default",
+            "msg" : "Hi~ 07."
+        },
+        {
+            "from" : "1445202000",
+            "to" : "002",
+            "timestamp" : "default",
+            "msg" : "Hi~ 05."
+        },
+        {
+            "from" : "002",
+            "to" : "1445202000",
+            "timestamp" : "default",
+            "msg" : "Hi~ 02."
+        }
+        
+    ]
+}

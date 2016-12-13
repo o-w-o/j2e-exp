@@ -1,0 +1,564 @@
+/*   ** 3.0 实用类 Stage
+=================================================================================
+一些辅助用的小工具  
+=================================================================================
+*/
+
+.stage-section {
+    /* stage-bg / stage-content 直接唯一孩子  建议 */
+    padding-right: 15px;
+    padding-left: 15px;
+    margin: 1%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.stage-image {
+    cursor: default;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.bg-center {
+    background-position: center center;
+}
+
+.bg-top {
+    background-position: top center;
+}
+
+.stage-x {
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    height: 30px;
+    width: 30px;
+    font-size: large;
+    text-align: center;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    z-index: 30;
+}
+
+@media (min-width: 768px) {
+    .stage-section {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .stage-section {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .stage-section {
+        width: 1170px;
+    }
+}
+
+
+/*   ** 3.1 一些按钮类型的样式设计
+=================================================================================
+一些按钮类型的样式设计  
+=================================================================================
+*/
+
+li [ class^="btn-"],
+a [ class^="btn-"],
+div [ class^="btn-"] {
+    display: inline-block;
+    line-height: 1;
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    transition: all 0.4s;
+    /*transition-property: all;
+    transition-duration: 0.4s;
+    transition-timing-function: ease;
+    transition-delay: 0s;*/
+}
+
+.btn-arrow span {
+    height: 40px;
+    margin: 1em;
+    line-height: 40px;
+}
+
+.btn-arrow .fbtn {
+    display: inline-block;
+}
+
+.btn-card {
+    padding: 11.5px 30px;
+    cursor: pointer;
+    margin: 0px;
+    border-radius: 0;
+    text-align: center;
+    color: #fff;
+}
+
+.btn-forget {
+    padding-top: 1em;
+    color: #999;
+}
+
+.btn-forget:hover {
+    color: #F44336;
+}
+
+.btn-forline {
+    padding: 15px 30px;
+    margin: 0px 0px;
+    border-radius: 0;
+    color: #0088CC;
+}
+
+.btn-forline:hover {
+    color: #fff;
+    background-color: #0088CC;
+}
+
+.btn-forline:focus {
+    color: #fff;
+    background-color: #0088CC;
+    text-decoration: none;
+}
+
+.forline-active {
+    color: #fff;
+    background-color: #0088CC;
+}
+
+.btn-trans {
+    padding: 15px 30px;
+    margin: 0 15px 0 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #000;
+}
+
+.btn-trans:hover {
+    color: #000;
+    background-color: rgba(255, 255, 255, 5);
+    /*border-bottom: 2px solid orange;*/
+    text-decoration: none;
+}
+
+.btn-trans:focus {
+    color: #000;
+    background-color: rgba(255, 255, 255, 5);
+    /*border-bottom: 2px solid orange;*/
+    text-decoration: none;
+}
+
+.btn-gold {
+    color: #FFFF66;
+    background-color: #333333;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.btn-gold:hover {
+    color: #FFFF66;
+}
+
+.btn-golden {
+    color: grey;
+    background-color: #fff;
+    transition: all 0.3s;
+}
+
+.btn-golden:hover {
+    color: #FFFF66;
+    background-color: #333333;
+}
+
+.btn-aqua {
+    background-color: #489887;
+    color: #fff;
+}
+
+.btn-aqua:hover {
+    color: #fff;
+}
+
+.btn-grey {
+    background-color: #2c3e50;
+    color: #fff;
+}
+
+.btn-grey:hover {
+    color: #fff;
+}
+
+.btn-alizarin{
+    background-color: #e74c3c;
+    color: #fff;
+    border-radius: 1.5px;
+}
+
+.btn-clouds{
+    background-color: #ecf0f1;
+}
+
+@media only screen and (max-width: 560px) {
+    .btn-forline {
+        padding: 10px 10px;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+    }
+    .btn-trans {
+        padding: 12px 15px;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .btn-forline {
+        padding: 10px 10px;
+        letter-spacing: 0.02em;
+    }
+    .btn-trans {
+        padding: 9px 7px;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .btn-forline {
+        display: inline-block;
+        padding: 9px 7px;
+        letter-spacing: 0.02em;
+        font-weight: 700;
+    }
+    .btn-trans {
+        margin-left: 2.5px;
+        margin-right: 2.5px;
+        padding: 8px 6px;
+        letter-spacing: 0.01em;
+        font-size: small;
+        font-weight: 700;
+    }
+}
+
+
+/*   ** 3.2 一些辅助用的小工具
+=================================================================================
+一些辅助用的小工具  
+=================================================================================
+*/
+
+.bg-dblue-gold{
+    color: #FFFF66;
+    background-color: #2C3E50;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.bg-content {
+    /*padding: inherit;*/
+    background-color: white;
+    color: black;
+}
+
+
+/*.bg-content > div{
+        padding-right: 15px;
+        padding-left: 15px;
+}*/
+
+.bg-trans {
+    /* stage-content 直接唯一孩子  建议 */
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: auto;
+    padding-top: 1%;
+    border-style: none;
+    border-radius: 1px;
+    color: white;
+}
+
+.bg-trans .card {
+    color: #333;
+}
+
+.border-bottom-divider{
+    border-bottom: 2px solid grey;
+}
+
+.box-control {
+    height: 100%;
+    width: 100%;
+}
+
+.center-block {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.left-padding {
+    padding-left: 1em;
+}
+
+.side-padding {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.no-padding{
+    padding: 0 !important;
+}
+
+.np-left{
+    padding-left: 0 ;
+}
+
+.no-margin{
+    margin: 0 !important; 
+
+}
+
+.nm-right{
+    margin-right: 0 !important;
+}
+.mg{
+    margin: 1em;
+}
+
+.mg-rt-3x{
+    margin-right: 3em !important;
+}
+.mg-lt-3x{
+    margin-left: 3em !important;
+}
+
+.mg-bm{
+    margin-bottom: 1em;
+}
+
+.pd-bm{
+    padding-bottom: 1em;
+}
+
+.sample-height{
+    min-height: 1000px;
+}
+
+.text-grey {
+    color: #B6B6B6 !important;
+}
+
+a[class *=text-grey]:hover {
+    text-decoration: underline;
+    color: #0088CC !important;
+}
+
+.text-error {
+    color: red;
+}
+
+.text-red-0 {
+    color: #EF5350;
+}
+
+.text-green-0 {
+    color: #C5E1A5;
+}
+
+.text-green-1 {
+    color: #CDDC39;
+}
+
+.text-green-2 {
+    color: #4CAF50;
+}
+
+.text-purple-0 {
+    color: #9C27B0;
+}
+
+.text-golden {
+    color: goldenrod;
+}
+
+.text-golden:hover {
+    color: gold;
+}
+
+.text-wiki{
+    cursor: help;
+}
+
+.text-tooltips{
+    color:#489887;
+}
+
+.small {
+    color: grey;
+    font-size: 0.8em;
+}
+
+.bg-light {
+    background-color: #E5E5E5;
+}
+
+.text-blod {
+    font-weight: bold;
+}
+
+.text-indianred {
+    color: indianred !important;
+}
+
+.height-control {
+    height: inherit;
+}
+
+.min-height-control {
+    min-height: 100%;
+}
+
+.width-control {
+    width: 100%;
+}
+
+.hidden-x {
+    overflow-x: hidden;
+}
+
+.hidden-y {
+    overflow-y: hidden;
+}
+
+.paragraph {
+    padding: 4px 4px;
+    letter-spacing: normal;
+}
+
+.divider {
+    width: 0px;
+    border-right: 2px solid gray;
+    margin: auto 1em;
+}
+
+.divider-right {
+    border-right: 1px solid whitesmoke;
+}
+
+.mg-sm-right {
+    margin-right: 1em !important;
+}
+
+.mg-sm-left{
+
+    margin-left: 1em !important;
+}
+
+.pd-md-top {
+    padding-top: 100px !important;
+}
+
+.pd-sm-left {
+    padding-left: 1em;
+}
+
+.pd-sapce-top{
+    padding-top: 10vh;
+}
+
+.pd-content-htop{
+    padding-top: 8em;
+}
+
+.scroll-x {
+    overflow-x: scroll;
+}
+
+.scroll-y {
+    overflow-y: scroll;
+}
+
+.space-b1x {
+    padding-top: 1em;
+    padding-bottom: 0px;
+}
+.space-b2x{
+    padding-top: 2em;
+    padding-bottom: 0px;
+}
+.space-b3x{
+    padding-top: 3em;
+    padding-bottom: 0px;
+}
+
+.stage-box {
+    /*position: relative;*/
+    padding: 15vh 2px;
+    border-radius: 0px;
+}
+
+.box-none {
+    margin: auto;
+    padding: 0;
+    border: 0;
+}
+
+.box-small {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.small-top {
+    padding-top: 15px;
+}
+
+.stage-side {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.divider-b {
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+.div-center{
+	display:center;
+	margin:auto;
+}
+body.stage-image{
+	height:100%;
+	width:100%;
+}
+
+.pos-op-3px{
+    top: 3px;
+    position: relative;
+}
+
+.pos-cc-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}

@@ -1,0 +1,198 @@
+@charset "utf-8";
+
+/*  ** 基本布局
+================================================================================
+页面的基本布局和统一样式  
+================================================================================
+*/
+@import "_page.css";
+
+/*  ** 小工具类
+================================================================================
+一些辅助用的小工具  
+================================================================================
+*/
+@import "_tools.css";
+
+
+/*  ** 修复
+================================================================================
+问题修复  
+================================================================================
+*/
+@import "_fix.css";
+
+
+/*  &0  异常页面 */
+.lms-status-code{
+    font-size: 50px;
+    font-weight: bold;
+    color: #818181;
+    padding: 25px 0;
+}
+.lms-status-page{
+    width: 500px;
+    margin-top: 15vh !important;
+    padding: 3em;
+}
+.lms-status-e{
+    font-size: 16px;
+    padding-top:1em;
+    margin-left:.3em;
+}
+
+/*  &2.5 登录/注册 */
+
+#form-frame {
+    padding: 1em 2em;
+}
+
+#login-wrap {
+    min-width: 320px;
+    max-width: 720px;
+    margin: auto;
+}
+
+#login-form {
+    padding: 15px 45px;
+    border-right: 1px solid whitesmoke; 
+}
+
+#login-form .ccd-image{
+    float: right;
+    position: relative;
+    bottom: 25px; 
+    z-index: 1000; 
+    cursor:pointer;
+}
+
+#login-form .floating-label {
+    color: #5C5C5C;
+}
+
+#login-form .form-control {
+    border-bottom: 1px solid #DDD;
+}
+
+#login-form .text-error {
+    position: absolute;
+    color: #f50057;
+}
+
+#app-login-footer {
+    position: fixed;
+    background-color: #212121;
+    color: #fff;
+    padding: 30px;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+    left: 15px;
+    text-align: center;
+}
+
+
+/*修复 登录界面 验证码输入框的不对齐 的问题*/
+
+#login-form .form-control,
+#login-form .input-group-addon {
+    border-radius: 0;
+}
+@media (max-height: 740px) {
+    #app-login-footer {
+        display: none;
+    }
+}
+
+/*主页*/
+.nav-item{
+    background-color: #575757;
+}
+.nav-item-icon{
+    top: 2px;
+    position: relative;
+}
+.nav-item-text{
+    margin-right: 1em;
+}
+
+#panel-Index,#panel-manageInbox{
+    max-width: 960px;
+}
+.bg-content{
+    position: fixed;
+    background-color: #333;
+    background-attachment: fixed;
+    background-position: top left;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 450px;
+}
+.bg-content ~ div{
+    position: relative;
+}
+.z-index-top{
+    z-index: 101;
+}
+.z-index-mid{
+    z-index: 100;
+    position: relative;
+}
+.z-index-bottom{
+    z-index: 99;
+}
+.z-index-bg{
+    z-index: 0;
+}
+#itisme .fbtn{
+    display: inline-block;
+}
+
+.nav-e-resp{
+    background-color: rgb(255, 255, 255);
+    position: fixed;
+    right: 60px;
+    top: 0px;
+    height: 56px;
+    z-index: 100;
+}
+
+.app-content{
+    margin-top: 80px;
+}
+
+/*好友列表*/
+app-c-contact{
+    padding-left: 3em;
+}
+app-c-grp-wrap,app-c-grp,app-c-pal{
+    display: block;
+    background-color: #fff;
+    box-shadow: 0 -1px 0 #e5e5e5,0 0 2px rgba(0,0,0,.12),0 2px 4px rgba(0,0,0,.24);
+    
+}
+app-c-grp-wrap{
+    padding: 1em 1em 1.8em;
+    margin: .5em .2em 3em;
+    position: relative;
+}
+app-c-grp{
+    position: absolute;
+    top: 0;
+    left: -2.8em;
+    width: 2em;
+    padding: .5em;
+    cursor: pointer;
+}
+app-c-pal{ 
+    padding: .5em 1.5em !important;
+    margin: .8em .5em;
+}
+app-c-pal.btn{
+    background-color: #FFF;
+}
+app-c-grp.selected, 
+app-c-pal.selected {
+    background-color: #EEE;
+}

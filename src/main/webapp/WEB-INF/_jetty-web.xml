@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Configure PUBLIC "-//Jetty//Configure//EN" "http://www.eclipse.org/jetty/configure.dtd">
+
+<Configure class="org.eclipse.jetty.webapp.WebAppContext">
+    <Set name="defaultsDescriptor">src/main/resources/web-default.xml</Set>
+    <Set name="parentLoaderPriority">true</Set>
+    <Set name="ThreadPool">
+        <New class="org.mortbay.thread.BoundedThreadPool">
+            <Set name="minThreads">3</Set>
+            <Set name="lowThreads">0</Set>
+            <Set name="maxThreads">3</Set>
+        </New>
+    </Set>
+</Configure>

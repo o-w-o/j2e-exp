@@ -1,0 +1,41 @@
+{
+    "code": "200",
+    "data": [
+        {
+            "fid" : "001",
+            "uname" : "李明",
+            "gname" : "default"
+        },
+        {
+            "fid" : "002",
+            "uname" : "Mr Wang",
+            "gname" : "陌生人"
+        },
+        {
+            "fid" : "003",
+            "uname" : "韩美美",
+            "gname" : "陌生人"
+        },
+        {
+            "fid" : "004",
+            "uname" : "天明",
+            "gname" : "default"
+        },
+        {
+            "fid" : "005",
+            "uname" : "搞笑",
+            "gname" : "我的大学"
+        },
+        {
+            "fid" : "006",
+            "uname" : "橙子",
+            "gname" : "我的大学"
+        },
+        {
+            "fid" : "007",
+            "uname" : "企鹅",
+            "gname" : "default"
+        }
+        
+    ]
+}
